@@ -75,7 +75,8 @@ const DepartmentPage = () => {
   return (
     <div className="container mx-auto p-6">
       <h1 className="text-3xl font-bold text-center mb-4 text-blue-700">
-        Department: {department ? decodeURIComponent(department) : "Unknown"}
+        Department: {department ? decodeURIComponent(Array.isArray(department) ? department[0] : department) : "Unknown"}
+
       </h1>
       <h2 className="text-xl text-center mb-6 text-blue-500">
         Club: {clubName}
